@@ -7,3 +7,5 @@ Demoying usage of Nordic DFU Library (https://github.com/NordicSemiconductor/IOS
 - After/before you can add your application.dat/bin using iTunes File Sharing or directly by sharing a zip to the app ("Open In" menu from dropbox, ..), the zip have to have the two file with the correct name at the root level.
 
 - Update your device using DFU
+
+PS: Errors only in console so far, ...
