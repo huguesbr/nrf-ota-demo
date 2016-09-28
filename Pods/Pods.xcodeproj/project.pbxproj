@@ -1,0 +1,978 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		071F4D63089D0C1B0BEF8656685F4568 /* LegacyDFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E68A46A6C2B282EE0040164AF90DC6 /* LegacyDFUService.swift */; };
+		0BB9630DE78C90EB12F5249EE215DF0C /* iOSDFULibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B591DFFA9731B71404E1610EA7A8D3 /* iOSDFULibrary-dummy.m */; };
+		11D547A63C3679F5672D1F2C9F6E7DED /* SecureDFUServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2687932E29C964D7F3DBEADE0F3BC /* SecureDFUServiceController.swift */; };
+		1A1AFE0A2E1FAA0EF58E7FB19B749409 /* DFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC97FC2104D9F0A443B614A52A41EB /* DFUExecutor.swift */; };
+		1CD91F95074DA726849D31C5AF653D1D /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = B503C16BF769BF7156FC5E24376F0ED9 /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1FEFE601D371910411DFFEB6C5C2ED53 /* NSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CADCB535623B4D66ABDCF526FAD7C3 /* NSData.swift */; };
+		207118DDB7AE818A9D9F237ADF132A1F /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = C079F8DC65E5113CB2685D40DEEF62B3 /* zip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		22615EA9D77BA5517325E5DC8F1268D1 /* brg_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F99740B1F278AD1E7D2E994AE2FC29 /* brg_types.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2409624382635DED0D4501727FAC136D /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 295F52607A69586592F420A1D96B83F1 /* ioapi.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		26AD1178979C7682D8AF1F0D5F30D780 /* DFUStreamHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33450B1101E432FCE9B68B9653521EFA /* DFUStreamHex.swift */; };
+		27BDC4DF36E34D24E6CA52D6667E0EDF /* LegacyDFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F8F5CDBEE58209A3E1357B5536518 /* LegacyDFUExecutor.swift */; };
+		29D0F37B162F72CCF22A11ED95B2ED4C /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 69B39C47C799580901254C17F7414D56 /* entropy.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		29EDFF7B770ED4D072312739E0EF9416 /* LoggerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF8F8E24FDD7CDDF943D5D78705E2C /* LoggerDelegate.swift */; };
+		2C4E7FDBBEF8B4CD71DA6A0130ADC0DD /* prng.h in Headers */ = {isa = PBXBuildFile; fileRef = DECDE815D1045DE98D149144A5F805DF /* prng.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		342B8D3621A0BE75F2922BA8E4C6D8CF /* SecureDFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CF092C69989E3870123D735CC748AA /* SecureDFUServiceInitiator.swift */; };
+		345AF26AAE136E0893710CF6D7FF4CEA /* DFUPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAFEECA6D70115FBC2E7DA60A709F4D /* DFUPacket.swift */; };
+		354212A30B693AA60A3AA8ACE78D8265 /* iOSDFULibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C4DF2DD3E2033DBE1ABA8546AD6250 /* iOSDFULibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		383C3C9BF563BD520DC5C8DBD09940FD /* IntelHex2BinConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 745944AABCAEE4DEB65D58EBAE35042F /* IntelHex2BinConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FCC5C331B3B76A86170E8D208086C34 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA752FC50D3FE7098349A81C991A0C13 /* SSZipArchive-dummy.m */; };
+		42C18BE6195CC07B79FEC1C8A41595D1 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C53343D0C2DAC8DEA096C5A598B52977 /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		44830ACA997ED7D1BDBFAD20782BF99E /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A0128C4B5C6B6F646CAE131009D8836 /* aestab.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		46078FFB99BFE627ACDABD0015571F1B /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 43FB04FC7EF8D5504FADDF31D36E0A1C /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4BC145A0212429012CF38848600D3340 /* DFUPeripheralSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCBA0B8853DB34F63F380F4A0C283D /* DFUPeripheralSelector.swift */; };
+		4C0AF6A0C3135463E15922A0662016C2 /* LegacyDFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DEB002118EEDD132F255CE58A95D44 /* LegacyDFUServiceInitiator.swift */; };
+		4D3E7068E645D61D1FED2F0D386E9EB0 /* DFUFirmware.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1BFF15629E8A351143391B090FBA7 /* DFUFirmware.swift */; };
+		4DE35A1E2D1FFFE56E65B4137C508D8C /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = DA647118FCE9334705E0DDD43F5D489F /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4E69DA3C41746A62D3815F93B38C4BB4 /* ManifestFirmwareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994D2325EBD8FDBFC6F72898DBF62FB /* ManifestFirmwareInfo.swift */; };
+		50187B61CF287B1F490D63D99935748F /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB86275E56D41335FAEC15E8E1EC152 /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50E97DDFA25BB8D95AD3814648A024C8 /* DFUStreamBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FF6520B3C60893D5FFD1A07A2A993E /* DFUStreamBin.swift */; };
+		53A1D2715675957E32054073ED274761 /* CBCentralManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923ABA2F2E4C90616620666970A9C1F8 /* CBCentralManagerExtensions.swift */; };
+		54CD20B23553FEEA167611CED3BB7878 /* DFUStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABEEDCA82E097931BF5CA6BE7FEB147 /* DFUStream.swift */; };
+		54F165B9BED358B151242BE6E79EFAAA /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = D29769BE58D5C710D5E8D452175E1B22 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5A75C4D7C5603B47D54DA6CECCF0AB93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		5DBDE749CB3E0C9E2FF644081A77FD4F /* SecureDFUServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8970E8EAC24387B12D9010E411989E /* SecureDFUServiceDelegate.swift */; };
+		61E4F0D90C1A7AEBA222E4572BFD7ABA /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A0655CD19365E60549E372B853B270 /* mztools.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6329B0206E4B3F5CD42A6BBA79B32B50 /* crc32.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBC31391F116A36B0C340F70820B74 /* crc32.swift */; };
+		64037D92D11C021F409EE6ABEFD6075F /* entropy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C2E5211E3508BC0135A28DEA49DAD50 /* entropy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6D0A455B6886608F50B140D63F5CB494 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 999CD8577FA0BEEAC086E3A0A7C23F00 /* ZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D3E87DE61BFA93A53CCE171215FD716 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		702A712274BEB641C07D72A9DC55651C /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6022966C8EDB6F0943DB3709DBD0898F /* Double.swift */; };
+		703CE9F8B364370208D7F7A76F37F1F7 /* DFUVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F1524A67E80608B4A3B7B285B5AD58 /* DFUVersion.swift */; };
+		784EFB4BAABD23E65C6E4B54C859BA61 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 01893FB88960B304F54212D1BE6F7C08 /* sha1.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7A619007E9B34A444B34FF6D55FCDF91 /* ZipArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B9A581F7228486F9987937732483B /* ZipArchive.swift */; };
+		7E3652AD033812459CC8959BAF3E7BF1 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 68496E8EA709AD3C26E7A569CCF16223 /* aeskey.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8297843D60FEACF0FF8927A54F4934A7 /* brg_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 6457861D2F8C0FC0672E3C19DA558DE6 /* brg_endian.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8753D39DC4A13A582FCF68D3C8DDAB6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		8AFFB890561E15FB6DC02AB45E7B7FEB /* aes_via_ace.h in Headers */ = {isa = PBXBuildFile; fileRef = 7545DE38CB1662BB990BFC3617F2914C /* aes_via_ace.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8B9A3D679D201F5101E1AC916DB61BA0 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A6CA3FD2DDD329381A98BE0AD96A627 /* mztools.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		919E23EB8B9D1079AE0CDA2658A4E682 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 9181392D952426F74D5575CD8D15DDF3 /* hmac.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		97D878F0CF2390E64E900596576F45F6 /* SecureDFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CED0D07027584D93966DC3E33DF07 /* SecureDFUService.swift */; };
+		980231AB50ED32BB5D702827FF514CFF /* LegacyDFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC5C63B7454B0E874FEDD6B070B200 /* LegacyDFUPeripheral.swift */; };
+		A69DC3C2C2988C605D2C14D89965A237 /* DFUPeripheralSelectorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBFFCA6FEBEBB0522341F5F8AA9EE4 /* DFUPeripheralSelectorDelegate.swift */; };
+		A6F7CDE442AF028BD307E0C7AEEF2089 /* DFUServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE6B5B74AA5BC662CDA4EE3526FAEE /* DFUServiceDelegate.swift */; };
+		A762963AF1F9374B3E97921C34D8D165 /* DFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F56099B9B901F76975E6234D6859E7 /* DFUServiceInitiator.swift */; };
+		A977DE8E3BCECF5E54BC663B7BF0AEE9 /* Pods-OTA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52DF844F59836B11D5C4863300237286 /* Pods-OTA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE5D716A9650DC27863103BE55EB3933 /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9E9ACDFDA892F8AF4C43F293EBA620 /* hmac.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AEDCDEDC4C5E9BBD8951528151C60DBF /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = E9910157869BF7537CA6933D83F47EDE /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B0DADE3663C25ADD432C89FF8B68968A /* aestab.h in Headers */ = {isa = PBXBuildFile; fileRef = 99791F0FBFB67E745B0FCAF6660BDE7B /* aestab.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B227B7751BEAED61DE185BEA058F4727 /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FEED6FF1E7011E02E5773FF62BD5EF9 /* sha1.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B788EB382F50F1BCD9F34C8ED231673C /* SSZipArchive-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF8B1A906819FB5BCA7B94F2B2D47D0B /* SSZipArchive-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAB84E687E40FD372A9A051794BDCD76 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = D3B163EF4F90BE6DF0F070E59E298D4C /* aes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BD1E9EB8E7216508185BF6C68AE6BFC1 /* aesopt.h in Headers */ = {isa = PBXBuildFile; fileRef = C901D69834BAA17141E28EEEC3552670 /* aesopt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C34B9BDFAC06D3BDC1F99AEA866EAFE7 /* IntelHex2BinConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BCD66B408E5490C0268DA60F242FA /* IntelHex2BinConverter.m */; };
+		C6ED2941CD82D6482144CC69342C5107 /* SoftdeviceBootloaderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761DF0F53A027BDDA5B09708745B21A /* SoftdeviceBootloaderInfo.swift */; };
+		C99B78767C40373A608F08A7BCC73F99 /* pwd2key.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8C311698EAD39FAB166CC01B4FF846 /* pwd2key.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CCA2F4B4F531349DE86ECD1E6B2FA0EF /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC0D2F869830C019C6E59CA61D8F93 /* fileenc.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CEC2858ED431F3BFC96F448E4555A247 /* Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC05142EAE9ADD943649D2770304339 /* Manifest.swift */; };
+		CEE277CFCBEC1798AF16EC9DB37BD528 /* DFUStreamZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD75565B13878AB5B1B1F5007F85E1 /* DFUStreamZip.swift */; };
+		D12C19B425D6C5E63208FB4B479FA5DD /* SecureDFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0C01CF62B0FFAA8CFD19702CAE3B24 /* SecureDFUPeripheralDelegate.swift */; };
+		D9EDFC1A5E770CA091203DDA9BD47747 /* SecureDFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE471CDE8E76BD0D1474875ED59834CE /* SecureDFUPeripheral.swift */; };
+		DAFD84F3900E7A7E535D4EA172DE307D /* Pods-OTA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE78B4CFD60EE752C7CBB550134FC6CB /* Pods-OTA-dummy.m */; };
+		DDE96992C5792B3085D204BD360DD96E /* SecureDFUControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B206016F179339534E2B6C8F9572CB /* SecureDFUControlPoint.swift */; };
+		E0961726CDCECA1D367D4C659BC4165E /* fileenc.h in Headers */ = {isa = PBXBuildFile; fileRef = E83E7D90E4D342F1C82E0DE069CBA0A0 /* fileenc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E2A9A7B606C6B19DE78F170B647EC8CF /* SecureDFUPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32C882C8880006EF78AC106C45A8C9 /* SecureDFUPacket.swift */; };
+		E633C336B8771B543A3722FC3FF7DD69 /* DFUControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9882CD5707D58ECC41F2E53DE361EA /* DFUControlPoint.swift */; };
+		E6DEC0432F0B3EDFBD603D5F139D0C20 /* LoggerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5022CFD1F6CDB5D858B91373D8350F /* LoggerHelper.swift */; };
+		E8C928D434DEBA17CE286A2D5C6A2A7F /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = DCF82AE4EBDA468035EDE179C694D5A8 /* prng.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EEABD697B5E84D4A882783CBDABD22F1 /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 166A213D1D07EE044C02AFD2581B2358 /* SSZipCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEF2B9622BF70CE9D488F029A35367DE /* LegacyDFUServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EF532F5C7CB9EFDD6606A1A5781F2 /* LegacyDFUServiceController.swift */; };
+		EF7BDB7E3848E708B314336FEEA9ACF1 /* DFUServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C419A766979949972FAFDBF46C7F21D /* DFUServiceController.swift */; };
+		F4735AE3FDDEF22355B2412233956052 /* SecureDFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72452B8C09EDE2D9A417F65D3CA403E7 /* SecureDFUExecutor.swift */; };
+		F4A4218074871D8A34D7E119337AFAE3 /* LegacyDFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE94D22BEEC96A5E9CA0C40FEA484C /* LegacyDFUPeripheralDelegate.swift */; };
+		FA1FA95BAB5C98D85601BC837C874417 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F7EAB222938EB027BCE55F546B356F /* aescrypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FD92118FD389F8CC6E4A107D8AF6E425 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D2CADB6E963AC3DE18845A0868E203B /* pwd2key.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01CF88FCE4E7F0175290BE0CF6AE7233 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5604BA8ED28B349ED231C6E28112C984;
+			remoteInfo = SSZipArchive;
+		};
+		BF003DF27C62BCC71294D41CE1977F7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF4667F6C7DCC8C959B1D63C6FBC6D86;
+			remoteInfo = iOSDFULibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01893FB88960B304F54212D1BE6F7C08 /* sha1.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = SSZipArchive/aes/sha1.c; sourceTree = "<group>"; };
+		03F4E7B509E9434BBD672D6B6858C7D5 /* Pods-OTA-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OTA-frameworks.sh"; sourceTree = "<group>"; };
+		06C4DF2DD3E2033DBE1ABA8546AD6250 /* iOSDFULibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDFULibrary-umbrella.h"; sourceTree = "<group>"; };
+		09A0655CD19365E60549E372B853B270 /* mztools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mztools.h; path = SSZipArchive/minizip/mztools.h; sourceTree = "<group>"; };
+		0C2E5211E3508BC0135A28DEA49DAD50 /* entropy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = entropy.h; path = SSZipArchive/aes/entropy.h; sourceTree = "<group>"; };
+		12A3A7F73F24EADC580F9F76A6F87134 /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
+		166A213D1D07EE044C02AFD2581B2358 /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
+		1826FBB33759F1C60961749F96DC5AA6 /* iOSDFULibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = iOSDFULibrary.modulemap; sourceTree = "<group>"; };
+		1994D2325EBD8FDBFC6F72898DBF62FB /* ManifestFirmwareInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ManifestFirmwareInfo.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/ManifestFirmwareInfo.swift; sourceTree = "<group>"; };
+		1EA4562FB9EF0BF1E9A2461130071075 /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
+		25E68A46A6C2B282EE0040164AF90DC6 /* LegacyDFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUService.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Services/LegacyDFUService.swift; sourceTree = "<group>"; };
+		295F52607A69586592F420A1D96B83F1 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
+		2A6CA3FD2DDD329381A98BE0AD96A627 /* mztools.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mztools.c; path = SSZipArchive/minizip/mztools.c; sourceTree = "<group>"; };
+		2CC528AB7B87904718BC8BABACE287E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D2CADB6E963AC3DE18845A0868E203B /* pwd2key.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pwd2key.c; path = SSZipArchive/aes/pwd2key.c; sourceTree = "<group>"; };
+		2EFD75565B13878AB5B1B1F5007F85E1 /* DFUStreamZip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamZip.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamZip.swift; sourceTree = "<group>"; };
+		33450B1101E432FCE9B68B9653521EFA /* DFUStreamHex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamHex.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamHex.swift; sourceTree = "<group>"; };
+		33EC5C63B7454B0E874FEDD6B070B200 /* LegacyDFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Peripherals/LegacyDFUPeripheral.swift; sourceTree = "<group>"; };
+		3ABEEDCA82E097931BF5CA6BE7FEB147 /* DFUStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStream.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStream.swift; sourceTree = "<group>"; };
+		3B8C311698EAD39FAB166CC01B4FF846 /* pwd2key.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pwd2key.h; path = SSZipArchive/aes/pwd2key.h; sourceTree = "<group>"; };
+		3E7A8E5680C1715BF80592779B822C79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5BCD66B408E5490C0268DA60F242FA /* IntelHex2BinConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IntelHex2BinConverter.m; path = iOSDFULibrary/Classes/Utilities/HexToBinConverter/IntelHex2BinConverter.m; sourceTree = "<group>"; };
+		41EC97FC2104D9F0A443B614A52A41EB /* DFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUExecutor.swift; sourceTree = "<group>"; };
+		43FB04FC7EF8D5504FADDF31D36E0A1C /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
+		48CF092C69989E3870123D735CC748AA /* SecureDFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/DFU/SecureDFUServiceInitiator.swift; sourceTree = "<group>"; };
+		4C419A766979949972FAFDBF46C7F21D /* DFUServiceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceController.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUServiceController.swift; sourceTree = "<group>"; };
+		4C9E9ACDFDA892F8AF4C43F293EBA620 /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = SSZipArchive/aes/hmac.h; sourceTree = "<group>"; };
+		4D8B69EE63E111B472227453F3762DD7 /* Pods-OTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTA.release.xcconfig"; sourceTree = "<group>"; };
+		4FCC0D2F869830C019C6E59CA61D8F93 /* fileenc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = fileenc.c; path = SSZipArchive/aes/fileenc.c; sourceTree = "<group>"; };
+		52DF844F59836B11D5C4863300237286 /* Pods-OTA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTA-umbrella.h"; sourceTree = "<group>"; };
+		5A8FFED1B1C02963C5B63375B2D723B0 /* Pods-OTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTA.debug.xcconfig"; sourceTree = "<group>"; };
+		5ADD6F60784F9D7A8B7B53411975420C /* Pods-OTA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-OTA.modulemap"; sourceTree = "<group>"; };
+		5CAFEECA6D70115FBC2E7DA60A709F4D /* DFUPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPacket.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUPacket.swift; sourceTree = "<group>"; };
+		5CB86275E56D41335FAEC15E8E1EC152 /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
+		6022966C8EDB6F0943DB3709DBD0898F /* Double.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Double.swift; path = iOSDFULibrary/Classes/Utilities/Double.swift; sourceTree = "<group>"; };
+		613CED0D07027584D93966DC3E33DF07 /* SecureDFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUService.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Services/SecureDFUService.swift; sourceTree = "<group>"; };
+		6457861D2F8C0FC0672E3C19DA558DE6 /* brg_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_endian.h; path = SSZipArchive/aes/brg_endian.h; sourceTree = "<group>"; };
+		65F99740B1F278AD1E7D2E994AE2FC29 /* brg_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_types.h; path = SSZipArchive/aes/brg_types.h; sourceTree = "<group>"; };
+		68496E8EA709AD3C26E7A569CCF16223 /* aeskey.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aeskey.c; path = SSZipArchive/aes/aeskey.c; sourceTree = "<group>"; };
+		69B39C47C799580901254C17F7414D56 /* entropy.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = entropy.c; path = SSZipArchive/aes/entropy.c; sourceTree = "<group>"; };
+		6E5022CFD1F6CDB5D858B91373D8350F /* LoggerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoggerHelper.swift; path = iOSDFULibrary/Classes/Utilities/Logging/LoggerHelper.swift; sourceTree = "<group>"; };
+		72452B8C09EDE2D9A417F65D3CA403E7 /* SecureDFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/DFU/SecureDFUExecutor.swift; sourceTree = "<group>"; };
+		745944AABCAEE4DEB65D58EBAE35042F /* IntelHex2BinConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IntelHex2BinConverter.h; path = iOSDFULibrary/Classes/Utilities/HexToBinConverter/IntelHex2BinConverter.h; sourceTree = "<group>"; };
+		7545DE38CB1662BB990BFC3617F2914C /* aes_via_ace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes_via_ace.h; path = SSZipArchive/aes/aes_via_ace.h; sourceTree = "<group>"; };
+		75B206016F179339534E2B6C8F9572CB /* SecureDFUControlPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUControlPoint.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/SecureDFUControlPoint.swift; sourceTree = "<group>"; };
+		7A0128C4B5C6B6F646CAE131009D8836 /* aestab.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aestab.c; path = SSZipArchive/aes/aestab.c; sourceTree = "<group>"; };
+		7E9882CD5707D58ECC41F2E53DE361EA /* DFUControlPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUControlPoint.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUControlPoint.swift; sourceTree = "<group>"; };
+		7EF10FD42BCB23337F7582C1D21ACC4A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FEED6FF1E7011E02E5773FF62BD5EF9 /* sha1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = SSZipArchive/aes/sha1.h; sourceTree = "<group>"; };
+		84DE94D22BEEC96A5E9CA0C40FEA484C /* LegacyDFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Peripherals/LegacyDFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		84F7EAB222938EB027BCE55F546B356F /* aescrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aescrypt.c; path = SSZipArchive/aes/aescrypt.c; sourceTree = "<group>"; };
+		85BEE39BF746D3951C410FFA763BF6DF /* iOSDFULibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDFULibrary.xcconfig; sourceTree = "<group>"; };
+		87F56099B9B901F76975E6234D6859E7 /* DFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUServiceInitiator.swift; sourceTree = "<group>"; };
+		8B8FCD7A4897F50D7176DF3B3DE4E852 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BC2687932E29C964D7F3DBEADE0F3BC /* SecureDFUServiceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUServiceController.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/DFU/SecureDFUServiceController.swift; sourceTree = "<group>"; };
+		8DFCBA0B8853DB34F63F380F4A0C283D /* DFUPeripheralSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralSelector.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUPeripheralSelector.swift; sourceTree = "<group>"; };
+		9181392D952426F74D5575CD8D15DDF3 /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = hmac.c; path = SSZipArchive/aes/hmac.c; sourceTree = "<group>"; };
+		923ABA2F2E4C90616620666970A9C1F8 /* CBCentralManagerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBCentralManagerExtensions.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/CBCentralManagerExtensions.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		985F2B3F94F435B33FB9DA6FE3B7B4C0 /* Pods-OTA-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTA-acknowledgements.plist"; sourceTree = "<group>"; };
+		99791F0FBFB67E745B0FCAF6660BDE7B /* aestab.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aestab.h; path = SSZipArchive/aes/aestab.h; sourceTree = "<group>"; };
+		999CD8577FA0BEEAC086E3A0A7C23F00 /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/ZipArchive.h; sourceTree = "<group>"; };
+		9F348C29DC4BD4A820671E4D7B42240A /* SSZipArchive.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.xcconfig; sourceTree = "<group>"; };
+		A2F1524A67E80608B4A3B7B285B5AD58 /* DFUVersion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUVersion.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUVersion.swift; sourceTree = "<group>"; };
+		A4AF8F8E24FDD7CDDF943D5D78705E2C /* LoggerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoggerDelegate.swift; path = iOSDFULibrary/Classes/Utilities/Logging/LoggerDelegate.swift; sourceTree = "<group>"; };
+		AE471CDE8E76BD0D1474875ED59834CE /* SecureDFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Peripheral/SecureDFUPeripheral.swift; sourceTree = "<group>"; };
+		AFC05142EAE9ADD943649D2770304339 /* Manifest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manifest.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/Manifest.swift; sourceTree = "<group>"; };
+		B503C16BF769BF7156FC5E24376F0ED9 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = SSZipArchive/minizip/zip.h; sourceTree = "<group>"; };
+		B5BBFFCA6FEBEBB0522341F5F8AA9EE4 /* DFUPeripheralSelectorDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralSelectorDelegate.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUPeripheralSelectorDelegate.swift; sourceTree = "<group>"; };
+		B7BAC6E2EF54E4B2C114D8301E93E6F6 /* iOSDFULibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSDFULibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7DEB002118EEDD132F255CE58A95D44 /* LegacyDFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/DFU/LegacyDFUServiceInitiator.swift; sourceTree = "<group>"; };
+		BE0C01CF62B0FFAA8CFD19702CAE3B24 /* SecureDFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Peripheral/SecureDFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		C079F8DC65E5113CB2685D40DEEF62B3 /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
+		C53343D0C2DAC8DEA096C5A598B52977 /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
+		C5A1BFF15629E8A351143391B090FBA7 /* DFUFirmware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUFirmware.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFU/DFUFirmware.swift; sourceTree = "<group>"; };
+		C761DF0F53A027BDDA5B09708745B21A /* SoftdeviceBootloaderInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoftdeviceBootloaderInfo.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/SoftdeviceBootloaderInfo.swift; sourceTree = "<group>"; };
+		C901D69834BAA17141E28EEEC3552670 /* aesopt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aesopt.h; path = SSZipArchive/aes/aesopt.h; sourceTree = "<group>"; };
+		C9024B9A71831CDE69C95CF513CE0334 /* Pods_OTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE8970E8EAC24387B12D9010E411989E /* SecureDFUServiceDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUServiceDelegate.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/DFU/SecureDFUServiceDelegate.swift; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D0B591DFFA9731B71404E1610EA7A8D3 /* iOSDFULibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDFULibrary-dummy.m"; sourceTree = "<group>"; };
+		D29769BE58D5C710D5E8D452175E1B22 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = SSZipArchive/minizip/crypt.h; sourceTree = "<group>"; };
+		D3B163EF4F90BE6DF0F070E59E298D4C /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = SSZipArchive/aes/aes.h; sourceTree = "<group>"; };
+		D9AB1B1E6ADE8E873DD55319A8582B73 /* Pods-OTA-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTA-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DA32C882C8880006EF78AC106C45A8C9 /* SecureDFUPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPacket.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/SecureDFUPacket.swift; sourceTree = "<group>"; };
+		DA500E6A736B730644638A71384D3486 /* iOSDFULibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDFULibrary-prefix.pch"; sourceTree = "<group>"; };
+		DA647118FCE9334705E0DDD43F5D489F /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = SSZipArchive/minizip/ioapi.h; sourceTree = "<group>"; };
+		DCF82AE4EBDA468035EDE179C694D5A8 /* prng.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = prng.c; path = SSZipArchive/aes/prng.c; sourceTree = "<group>"; };
+		DE78B4CFD60EE752C7CBB550134FC6CB /* Pods-OTA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTA-dummy.m"; sourceTree = "<group>"; };
+		DECDE815D1045DE98D149144A5F805DF /* prng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = prng.h; path = SSZipArchive/aes/prng.h; sourceTree = "<group>"; };
+		E05F8F5CDBEE58209A3E1357B5536518 /* LegacyDFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/DFU/LegacyDFUExecutor.swift; sourceTree = "<group>"; };
+		E0DBC31391F116A36B0C340F70820B74 /* crc32.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = crc32.swift; path = iOSDFULibrary/Classes/Utilities/crc32.swift; sourceTree = "<group>"; };
+		E2FE6B5B74AA5BC662CDA4EE3526FAEE /* DFUServiceDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceDelegate.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFU/DFUServiceDelegate.swift; sourceTree = "<group>"; };
+		E36B9A581F7228486F9987937732483B /* ZipArchive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipArchive.swift; path = iOSDFULibrary/Classes/Utilities/ZipArchive.swift; sourceTree = "<group>"; };
+		E83E7D90E4D342F1C82E0DE069CBA0A0 /* fileenc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fileenc.h; path = SSZipArchive/aes/fileenc.h; sourceTree = "<group>"; };
+		E9910157869BF7537CA6933D83F47EDE /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
+		F3F7E10C805F480E1849F77A51E51CF0 /* Pods-OTA-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OTA-resources.sh"; sourceTree = "<group>"; };
+		F6FF6520B3C60893D5FFD1A07A2A993E /* DFUStreamBin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamBin.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamBin.swift; sourceTree = "<group>"; };
+		F9CADCB535623B4D66ABDCF526FAD7C3 /* NSData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSData.swift; path = iOSDFULibrary/Classes/Utilities/NSData.swift; sourceTree = "<group>"; };
+		FA2EF532F5C7CB9EFDD6606A1A5781F2 /* LegacyDFUServiceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUServiceController.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/DFU/LegacyDFUServiceController.swift; sourceTree = "<group>"; };
+		FA752FC50D3FE7098349A81C991A0C13 /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
+		FF8B1A906819FB5BCA7B94F2B2D47D0B /* SSZipArchive-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11C1447B602B3B577FEE642E9AF210A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8753D39DC4A13A582FCF68D3C8DDAB6E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E91A287B81837520EA19683920969C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A75C4D7C5603B47D54DA6CECCF0AB93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5D0DA09B7EEC937391FCE0762B3E0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D3E87DE61BFA93A53CCE171215FD716 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		025FFEEF82D8CFCABD97B0C494F6FFC5 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				D3B163EF4F90BE6DF0F070E59E298D4C /* aes.h */,
+				7545DE38CB1662BB990BFC3617F2914C /* aes_via_ace.h */,
+				84F7EAB222938EB027BCE55F546B356F /* aescrypt.c */,
+				68496E8EA709AD3C26E7A569CCF16223 /* aeskey.c */,
+				C901D69834BAA17141E28EEEC3552670 /* aesopt.h */,
+				7A0128C4B5C6B6F646CAE131009D8836 /* aestab.c */,
+				99791F0FBFB67E745B0FCAF6660BDE7B /* aestab.h */,
+				6457861D2F8C0FC0672E3C19DA558DE6 /* brg_endian.h */,
+				65F99740B1F278AD1E7D2E994AE2FC29 /* brg_types.h */,
+				D29769BE58D5C710D5E8D452175E1B22 /* crypt.h */,
+				69B39C47C799580901254C17F7414D56 /* entropy.c */,
+				0C2E5211E3508BC0135A28DEA49DAD50 /* entropy.h */,
+				4FCC0D2F869830C019C6E59CA61D8F93 /* fileenc.c */,
+				E83E7D90E4D342F1C82E0DE069CBA0A0 /* fileenc.h */,
+				9181392D952426F74D5575CD8D15DDF3 /* hmac.c */,
+				4C9E9ACDFDA892F8AF4C43F293EBA620 /* hmac.h */,
+				295F52607A69586592F420A1D96B83F1 /* ioapi.c */,
+				DA647118FCE9334705E0DDD43F5D489F /* ioapi.h */,
+				2A6CA3FD2DDD329381A98BE0AD96A627 /* mztools.c */,
+				09A0655CD19365E60549E372B853B270 /* mztools.h */,
+				DCF82AE4EBDA468035EDE179C694D5A8 /* prng.c */,
+				DECDE815D1045DE98D149144A5F805DF /* prng.h */,
+				2D2CADB6E963AC3DE18845A0868E203B /* pwd2key.c */,
+				3B8C311698EAD39FAB166CC01B4FF846 /* pwd2key.h */,
+				01893FB88960B304F54212D1BE6F7C08 /* sha1.c */,
+				7FEED6FF1E7011E02E5773FF62BD5EF9 /* sha1.h */,
+				5CB86275E56D41335FAEC15E8E1EC152 /* SSZipArchive.h */,
+				C53343D0C2DAC8DEA096C5A598B52977 /* SSZipArchive.m */,
+				166A213D1D07EE044C02AFD2581B2358 /* SSZipCommon.h */,
+				43FB04FC7EF8D5504FADDF31D36E0A1C /* unzip.c */,
+				E9910157869BF7537CA6933D83F47EDE /* unzip.h */,
+				C079F8DC65E5113CB2685D40DEEF62B3 /* zip.c */,
+				B503C16BF769BF7156FC5E24376F0ED9 /* zip.h */,
+				999CD8577FA0BEEAC086E3A0A7C23F00 /* ZipArchive.h */,
+				0F1EAD1A76173062DFE7EC89B86BD35A /* Support Files */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		0F1EAD1A76173062DFE7EC89B86BD35A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EF10FD42BCB23337F7582C1D21ACC4A /* Info.plist */,
+				12A3A7F73F24EADC580F9F76A6F87134 /* SSZipArchive.modulemap */,
+				9F348C29DC4BD4A820671E4D7B42240A /* SSZipArchive.xcconfig */,
+				FA752FC50D3FE7098349A81C991A0C13 /* SSZipArchive-dummy.m */,
+				1EA4562FB9EF0BF1E9A2461130071075 /* SSZipArchive-prefix.pch */,
+				FF8B1A906819FB5BCA7B94F2B2D47D0B /* SSZipArchive-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSZipArchive";
+			sourceTree = "<group>";
+		};
+		2C77776831937BF6BFC5915CB7419094 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E7A8E5680C1715BF80592779B822C79 /* Info.plist */,
+				1826FBB33759F1C60961749F96DC5AA6 /* iOSDFULibrary.modulemap */,
+				85BEE39BF746D3951C410FFA763BF6DF /* iOSDFULibrary.xcconfig */,
+				D0B591DFFA9731B71404E1610EA7A8D3 /* iOSDFULibrary-dummy.m */,
+				DA500E6A736B730644638A71384D3486 /* iOSDFULibrary-prefix.pch */,
+				06C4DF2DD3E2033DBE1ABA8546AD6250 /* iOSDFULibrary-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iOSDFULibrary";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4A69CB2CD8EF96CB35D16B26687970BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7BAC6E2EF54E4B2C114D8301E93E6F6 /* iOSDFULibrary.framework */,
+				C9024B9A71831CDE69C95CF513CE0334 /* Pods_OTA.framework */,
+				8B8FCD7A4897F50D7176DF3B3DE4E852 /* SSZipArchive.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6543463F0B67968417FDD163EA12D618 /* iOSDFULibrary */ = {
+			isa = PBXGroup;
+			children = (
+				923ABA2F2E4C90616620666970A9C1F8 /* CBCentralManagerExtensions.swift */,
+				E0DBC31391F116A36B0C340F70820B74 /* crc32.swift */,
+				7E9882CD5707D58ECC41F2E53DE361EA /* DFUControlPoint.swift */,
+				41EC97FC2104D9F0A443B614A52A41EB /* DFUExecutor.swift */,
+				C5A1BFF15629E8A351143391B090FBA7 /* DFUFirmware.swift */,
+				5CAFEECA6D70115FBC2E7DA60A709F4D /* DFUPacket.swift */,
+				8DFCBA0B8853DB34F63F380F4A0C283D /* DFUPeripheralSelector.swift */,
+				B5BBFFCA6FEBEBB0522341F5F8AA9EE4 /* DFUPeripheralSelectorDelegate.swift */,
+				4C419A766979949972FAFDBF46C7F21D /* DFUServiceController.swift */,
+				E2FE6B5B74AA5BC662CDA4EE3526FAEE /* DFUServiceDelegate.swift */,
+				87F56099B9B901F76975E6234D6859E7 /* DFUServiceInitiator.swift */,
+				3ABEEDCA82E097931BF5CA6BE7FEB147 /* DFUStream.swift */,
+				F6FF6520B3C60893D5FFD1A07A2A993E /* DFUStreamBin.swift */,
+				33450B1101E432FCE9B68B9653521EFA /* DFUStreamHex.swift */,
+				2EFD75565B13878AB5B1B1F5007F85E1 /* DFUStreamZip.swift */,
+				A2F1524A67E80608B4A3B7B285B5AD58 /* DFUVersion.swift */,
+				6022966C8EDB6F0943DB3709DBD0898F /* Double.swift */,
+				745944AABCAEE4DEB65D58EBAE35042F /* IntelHex2BinConverter.h */,
+				3F5BCD66B408E5490C0268DA60F242FA /* IntelHex2BinConverter.m */,
+				E05F8F5CDBEE58209A3E1357B5536518 /* LegacyDFUExecutor.swift */,
+				33EC5C63B7454B0E874FEDD6B070B200 /* LegacyDFUPeripheral.swift */,
+				84DE94D22BEEC96A5E9CA0C40FEA484C /* LegacyDFUPeripheralDelegate.swift */,
+				25E68A46A6C2B282EE0040164AF90DC6 /* LegacyDFUService.swift */,
+				FA2EF532F5C7CB9EFDD6606A1A5781F2 /* LegacyDFUServiceController.swift */,
+				B7DEB002118EEDD132F255CE58A95D44 /* LegacyDFUServiceInitiator.swift */,
+				A4AF8F8E24FDD7CDDF943D5D78705E2C /* LoggerDelegate.swift */,
+				6E5022CFD1F6CDB5D858B91373D8350F /* LoggerHelper.swift */,
+				AFC05142EAE9ADD943649D2770304339 /* Manifest.swift */,
+				1994D2325EBD8FDBFC6F72898DBF62FB /* ManifestFirmwareInfo.swift */,
+				F9CADCB535623B4D66ABDCF526FAD7C3 /* NSData.swift */,
+				75B206016F179339534E2B6C8F9572CB /* SecureDFUControlPoint.swift */,
+				72452B8C09EDE2D9A417F65D3CA403E7 /* SecureDFUExecutor.swift */,
+				DA32C882C8880006EF78AC106C45A8C9 /* SecureDFUPacket.swift */,
+				AE471CDE8E76BD0D1474875ED59834CE /* SecureDFUPeripheral.swift */,
+				BE0C01CF62B0FFAA8CFD19702CAE3B24 /* SecureDFUPeripheralDelegate.swift */,
+				613CED0D07027584D93966DC3E33DF07 /* SecureDFUService.swift */,
+				8BC2687932E29C964D7F3DBEADE0F3BC /* SecureDFUServiceController.swift */,
+				CE8970E8EAC24387B12D9010E411989E /* SecureDFUServiceDelegate.swift */,
+				48CF092C69989E3870123D735CC748AA /* SecureDFUServiceInitiator.swift */,
+				C761DF0F53A027BDDA5B09708745B21A /* SoftdeviceBootloaderInfo.swift */,
+				E36B9A581F7228486F9987937732483B /* ZipArchive.swift */,
+				2C77776831937BF6BFC5915CB7419094 /* Support Files */,
+			);
+			path = iOSDFULibrary;
+			sourceTree = "<group>";
+		};
+		7D57D399FE2EDD552FAEC09962ACB102 /* Pods-OTA */ = {
+			isa = PBXGroup;
+			children = (
+				2CC528AB7B87904718BC8BABACE287E0 /* Info.plist */,
+				5ADD6F60784F9D7A8B7B53411975420C /* Pods-OTA.modulemap */,
+				D9AB1B1E6ADE8E873DD55319A8582B73 /* Pods-OTA-acknowledgements.markdown */,
+				985F2B3F94F435B33FB9DA6FE3B7B4C0 /* Pods-OTA-acknowledgements.plist */,
+				DE78B4CFD60EE752C7CBB550134FC6CB /* Pods-OTA-dummy.m */,
+				03F4E7B509E9434BBD672D6B6858C7D5 /* Pods-OTA-frameworks.sh */,
+				F3F7E10C805F480E1849F77A51E51CF0 /* Pods-OTA-resources.sh */,
+				52DF844F59836B11D5C4863300237286 /* Pods-OTA-umbrella.h */,
+				5A8FFED1B1C02963C5B63375B2D723B0 /* Pods-OTA.debug.xcconfig */,
+				4D8B69EE63E111B472227453F3762DD7 /* Pods-OTA.release.xcconfig */,
+			);
+			name = "Pods-OTA";
+			path = "Target Support Files/Pods-OTA";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				9A483F3B83B406525EE6AB3E696A9C98 /* Pods */,
+				4A69CB2CD8EF96CB35D16B26687970BB /* Products */,
+				FC89D9DBD4102BE2F43768D966B898FC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9A483F3B83B406525EE6AB3E696A9C98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6543463F0B67968417FDD163EA12D618 /* iOSDFULibrary */,
+				025FFEEF82D8CFCABD97B0C494F6FFC5 /* SSZipArchive */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC89D9DBD4102BE2F43768D966B898FC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D57D399FE2EDD552FAEC09962ACB102 /* Pods-OTA */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3CE7B464B16A38226AB4CC5177209845 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB84E687E40FD372A9A051794BDCD76 /* aes.h in Headers */,
+				8AFFB890561E15FB6DC02AB45E7B7FEB /* aes_via_ace.h in Headers */,
+				BD1E9EB8E7216508185BF6C68AE6BFC1 /* aesopt.h in Headers */,
+				B0DADE3663C25ADD432C89FF8B68968A /* aestab.h in Headers */,
+				8297843D60FEACF0FF8927A54F4934A7 /* brg_endian.h in Headers */,
+				22615EA9D77BA5517325E5DC8F1268D1 /* brg_types.h in Headers */,
+				54F165B9BED358B151242BE6E79EFAAA /* crypt.h in Headers */,
+				64037D92D11C021F409EE6ABEFD6075F /* entropy.h in Headers */,
+				E0961726CDCECA1D367D4C659BC4165E /* fileenc.h in Headers */,
+				AE5D716A9650DC27863103BE55EB3933 /* hmac.h in Headers */,
+				4DE35A1E2D1FFFE56E65B4137C508D8C /* ioapi.h in Headers */,
+				61E4F0D90C1A7AEBA222E4572BFD7ABA /* mztools.h in Headers */,
+				2C4E7FDBBEF8B4CD71DA6A0130ADC0DD /* prng.h in Headers */,
+				C99B78767C40373A608F08A7BCC73F99 /* pwd2key.h in Headers */,
+				B227B7751BEAED61DE185BEA058F4727 /* sha1.h in Headers */,
+				B788EB382F50F1BCD9F34C8ED231673C /* SSZipArchive-umbrella.h in Headers */,
+				50187B61CF287B1F490D63D99935748F /* SSZipArchive.h in Headers */,
+				EEABD697B5E84D4A882783CBDABD22F1 /* SSZipCommon.h in Headers */,
+				AEDCDEDC4C5E9BBD8951528151C60DBF /* unzip.h in Headers */,
+				1CD91F95074DA726849D31C5AF653D1D /* zip.h in Headers */,
+				6D0A455B6886608F50B140D63F5CB494 /* ZipArchive.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494BA3F75CF9EF7FDD63C286E66B7FF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383C3C9BF563BD520DC5C8DBD09940FD /* IntelHex2BinConverter.h in Headers */,
+				354212A30B693AA60A3AA8ACE78D8265 /* iOSDFULibrary-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0B78D6C9C876661B80682D31742E7F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A977DE8E3BCECF5E54BC663B7BF0AEE9 /* Pods-OTA-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5604BA8ED28B349ED231C6E28112C984 /* SSZipArchive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94B989902D78DA00A13642168CC4DC63 /* Build configuration list for PBXNativeTarget "SSZipArchive" */;
+			buildPhases = (
+				DE788473091FEEBF88804150F4BF203A /* Sources */,
+				CE5D0DA09B7EEC937391FCE0762B3E0C /* Frameworks */,
+				3CE7B464B16A38226AB4CC5177209845 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSZipArchive;
+			productName = SSZipArchive;
+			productReference = 8B8FCD7A4897F50D7176DF3B3DE4E852 /* SSZipArchive.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A4415A26A32DFCCDD4256AF06E87EE05 /* Pods-OTA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80B9FA38D91C9AF53CD2BE868B055B71 /* Build configuration list for PBXNativeTarget "Pods-OTA" */;
+			buildPhases = (
+				689382D99B044ADBE1C1F2E8EB5D9887 /* Sources */,
+				3E91A287B81837520EA19683920969C2 /* Frameworks */,
+				B0B78D6C9C876661B80682D31742E7F0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E97E8B7667183DBE0B6A5126DB490813 /* PBXTargetDependency */,
+				7167601B4336F802F9238831F1B89994 /* PBXTargetDependency */,
+			);
+			name = "Pods-OTA";
+			productName = "Pods-OTA";
+			productReference = C9024B9A71831CDE69C95CF513CE0334 /* Pods_OTA.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF4667F6C7DCC8C959B1D63C6FBC6D86 /* iOSDFULibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B0B1F7807362AC8E11C3847E60B414B /* Build configuration list for PBXNativeTarget "iOSDFULibrary" */;
+			buildPhases = (
+				F9D9F750F58296C0D04C5CFE35B2C8B5 /* Sources */,
+				11C1447B602B3B577FEE642E9AF210A0 /* Frameworks */,
+				494BA3F75CF9EF7FDD63C286E66B7FF3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSDFULibrary;
+			productName = iOSDFULibrary;
+			productReference = B7BAC6E2EF54E4B2C114D8301E93E6F6 /* iOSDFULibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4A69CB2CD8EF96CB35D16B26687970BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF4667F6C7DCC8C959B1D63C6FBC6D86 /* iOSDFULibrary */,
+				A4415A26A32DFCCDD4256AF06E87EE05 /* Pods-OTA */,
+				5604BA8ED28B349ED231C6E28112C984 /* SSZipArchive */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		689382D99B044ADBE1C1F2E8EB5D9887 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFD84F3900E7A7E535D4EA172DE307D /* Pods-OTA-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE788473091FEEBF88804150F4BF203A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1FA95BAB5C98D85601BC837C874417 /* aescrypt.c in Sources */,
+				7E3652AD033812459CC8959BAF3E7BF1 /* aeskey.c in Sources */,
+				44830ACA997ED7D1BDBFAD20782BF99E /* aestab.c in Sources */,
+				29D0F37B162F72CCF22A11ED95B2ED4C /* entropy.c in Sources */,
+				CCA2F4B4F531349DE86ECD1E6B2FA0EF /* fileenc.c in Sources */,
+				919E23EB8B9D1079AE0CDA2658A4E682 /* hmac.c in Sources */,
+				2409624382635DED0D4501727FAC136D /* ioapi.c in Sources */,
+				8B9A3D679D201F5101E1AC916DB61BA0 /* mztools.c in Sources */,
+				E8C928D434DEBA17CE286A2D5C6A2A7F /* prng.c in Sources */,
+				FD92118FD389F8CC6E4A107D8AF6E425 /* pwd2key.c in Sources */,
+				784EFB4BAABD23E65C6E4B54C859BA61 /* sha1.c in Sources */,
+				3FCC5C331B3B76A86170E8D208086C34 /* SSZipArchive-dummy.m in Sources */,
+				42C18BE6195CC07B79FEC1C8A41595D1 /* SSZipArchive.m in Sources */,
+				46078FFB99BFE627ACDABD0015571F1B /* unzip.c in Sources */,
+				207118DDB7AE818A9D9F237ADF132A1F /* zip.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D9F750F58296C0D04C5CFE35B2C8B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A1D2715675957E32054073ED274761 /* CBCentralManagerExtensions.swift in Sources */,
+				6329B0206E4B3F5CD42A6BBA79B32B50 /* crc32.swift in Sources */,
+				E633C336B8771B543A3722FC3FF7DD69 /* DFUControlPoint.swift in Sources */,
+				1A1AFE0A2E1FAA0EF58E7FB19B749409 /* DFUExecutor.swift in Sources */,
+				4D3E7068E645D61D1FED2F0D386E9EB0 /* DFUFirmware.swift in Sources */,
+				345AF26AAE136E0893710CF6D7FF4CEA /* DFUPacket.swift in Sources */,
+				4BC145A0212429012CF38848600D3340 /* DFUPeripheralSelector.swift in Sources */,
+				A69DC3C2C2988C605D2C14D89965A237 /* DFUPeripheralSelectorDelegate.swift in Sources */,
+				EF7BDB7E3848E708B314336FEEA9ACF1 /* DFUServiceController.swift in Sources */,
+				A6F7CDE442AF028BD307E0C7AEEF2089 /* DFUServiceDelegate.swift in Sources */,
+				A762963AF1F9374B3E97921C34D8D165 /* DFUServiceInitiator.swift in Sources */,
+				54CD20B23553FEEA167611CED3BB7878 /* DFUStream.swift in Sources */,
+				50E97DDFA25BB8D95AD3814648A024C8 /* DFUStreamBin.swift in Sources */,
+				26AD1178979C7682D8AF1F0D5F30D780 /* DFUStreamHex.swift in Sources */,
+				CEE277CFCBEC1798AF16EC9DB37BD528 /* DFUStreamZip.swift in Sources */,
+				703CE9F8B364370208D7F7A76F37F1F7 /* DFUVersion.swift in Sources */,
+				702A712274BEB641C07D72A9DC55651C /* Double.swift in Sources */,
+				C34B9BDFAC06D3BDC1F99AEA866EAFE7 /* IntelHex2BinConverter.m in Sources */,
+				0BB9630DE78C90EB12F5249EE215DF0C /* iOSDFULibrary-dummy.m in Sources */,
+				27BDC4DF36E34D24E6CA52D6667E0EDF /* LegacyDFUExecutor.swift in Sources */,
+				980231AB50ED32BB5D702827FF514CFF /* LegacyDFUPeripheral.swift in Sources */,
+				F4A4218074871D8A34D7E119337AFAE3 /* LegacyDFUPeripheralDelegate.swift in Sources */,
+				071F4D63089D0C1B0BEF8656685F4568 /* LegacyDFUService.swift in Sources */,
+				EEF2B9622BF70CE9D488F029A35367DE /* LegacyDFUServiceController.swift in Sources */,
+				4C0AF6A0C3135463E15922A0662016C2 /* LegacyDFUServiceInitiator.swift in Sources */,
+				29EDFF7B770ED4D072312739E0EF9416 /* LoggerDelegate.swift in Sources */,
+				E6DEC0432F0B3EDFBD603D5F139D0C20 /* LoggerHelper.swift in Sources */,
+				CEC2858ED431F3BFC96F448E4555A247 /* Manifest.swift in Sources */,
+				4E69DA3C41746A62D3815F93B38C4BB4 /* ManifestFirmwareInfo.swift in Sources */,
+				1FEFE601D371910411DFFEB6C5C2ED53 /* NSData.swift in Sources */,
+				DDE96992C5792B3085D204BD360DD96E /* SecureDFUControlPoint.swift in Sources */,
+				F4735AE3FDDEF22355B2412233956052 /* SecureDFUExecutor.swift in Sources */,
+				E2A9A7B606C6B19DE78F170B647EC8CF /* SecureDFUPacket.swift in Sources */,
+				D9EDFC1A5E770CA091203DDA9BD47747 /* SecureDFUPeripheral.swift in Sources */,
+				D12C19B425D6C5E63208FB4B479FA5DD /* SecureDFUPeripheralDelegate.swift in Sources */,
+				97D878F0CF2390E64E900596576F45F6 /* SecureDFUService.swift in Sources */,
+				11D547A63C3679F5672D1F2C9F6E7DED /* SecureDFUServiceController.swift in Sources */,
+				5DBDE749CB3E0C9E2FF644081A77FD4F /* SecureDFUServiceDelegate.swift in Sources */,
+				342B8D3621A0BE75F2922BA8E4C6D8CF /* SecureDFUServiceInitiator.swift in Sources */,
+				C6ED2941CD82D6482144CC69342C5107 /* SoftdeviceBootloaderInfo.swift in Sources */,
+				7A619007E9B34A444B34FF6D55FCDF91 /* ZipArchive.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7167601B4336F802F9238831F1B89994 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDFULibrary;
+			target = AF4667F6C7DCC8C959B1D63C6FBC6D86 /* iOSDFULibrary */;
+			targetProxy = BF003DF27C62BCC71294D41CE1977F7C /* PBXContainerItemProxy */;
+		};
+		E97E8B7667183DBE0B6A5126DB490813 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = 5604BA8ED28B349ED231C6E28112C984 /* SSZipArchive */;
+			targetProxy = 01CF88FCE4E7F0175290BE0CF6AE7233 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		42287DDF97330524BA3EF220F0276DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		580278A27436A84B1AA1A958A84FBA27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A8FFED1B1C02963C5B63375B2D723B0 /* Pods-OTA.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OTA/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTA/Pods-OTA.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OTA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		62CAE6E8A7F9CA7CF24F8CD013BC094B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85BEE39BF746D3951C410FFA763BF6DF /* iOSDFULibrary.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDFULibrary/iOSDFULibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDFULibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = iOSDFULibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8C329F4AA83EBB36A7600FCC7ACAE14E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D8B69EE63E111B472227453F3762DD7 /* Pods-OTA.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OTA/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTA/Pods-OTA.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OTA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AE9439C22469D35336242DD983DB5C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CCC3AB2723D41BAB2020DB021623A706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85BEE39BF746D3951C410FFA763BF6DF /* iOSDFULibrary.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDFULibrary/iOSDFULibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDFULibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = iOSDFULibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DC9B6EF83423A22D2D487D1E990B5773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F348C29DC4BD4A820671E4D7B42240A /* SSZipArchive.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSZipArchive/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SSZipArchive/SSZipArchive.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SSZipArchive;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F8C0702443D91DE2882510AEF07DBECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F348C29DC4BD4A820671E4D7B42240A /* SSZipArchive.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSZipArchive/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SSZipArchive/SSZipArchive.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SSZipArchive;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9439C22469D35336242DD983DB5C5F /* Debug */,
+				42287DDF97330524BA3EF220F0276DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B0B1F7807362AC8E11C3847E60B414B /* Build configuration list for PBXNativeTarget "iOSDFULibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCC3AB2723D41BAB2020DB021623A706 /* Debug */,
+				62CAE6E8A7F9CA7CF24F8CD013BC094B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80B9FA38D91C9AF53CD2BE868B055B71 /* Build configuration list for PBXNativeTarget "Pods-OTA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				580278A27436A84B1AA1A958A84FBA27 /* Debug */,
+				8C329F4AA83EBB36A7600FCC7ACAE14E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94B989902D78DA00A13642168CC4DC63 /* Build configuration list for PBXNativeTarget "SSZipArchive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC9B6EF83423A22D2D487D1E990B5773 /* Debug */,
+				F8C0702443D91DE2882510AEF07DBECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

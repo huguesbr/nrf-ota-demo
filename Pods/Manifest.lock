@@ -1,0 +1,31 @@
+PODS:
+  - iOSDFULibrary (1.0.12)
+  - SSZipArchive (1.6.1)
+
+DEPENDENCIES:
+  - iOSDFULibrary (from `http://github.com/huguesbr/IOS-Pods-DFU-Library`, branch `feature/swift2.3`)
+  - SSZipArchive (from `http://github.com/ZipArchive/ZipArchive`, branch `swift23`)
+
+EXTERNAL SOURCES:
+  iOSDFULibrary:
+    :branch: feature/swift2.3
+    :git: http://github.com/huguesbr/IOS-Pods-DFU-Library
+  SSZipArchive:
+    :branch: swift23
+    :git: http://github.com/ZipArchive/ZipArchive
+
+CHECKOUT OPTIONS:
+  iOSDFULibrary:
+    :commit: ecc0a5d2721589ea8e05a0090e0731e841e72064
+    :git: http://github.com/huguesbr/IOS-Pods-DFU-Library
+  SSZipArchive:
+    :commit: ddd27ec5abdedc04b2964bf45cf1e91f762da588
+    :git: http://github.com/ZipArchive/ZipArchive
+
+SPEC CHECKSUMS:
+  iOSDFULibrary: d70ab541d31d8440715efe64a2107c5019c6fcc6
+  SSZipArchive: 0847403f612553a361f9b44f1c7e135cefbc668d
+
+PODFILE CHECKSUM: 6ea5b5ea27cfc7fd343678f5520bfbd431663779
+
+COCOAPODS: 1.0.1
